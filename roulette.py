@@ -27,8 +27,12 @@ def get_result(choice):
         input_number = int(input("choose a number"))
         if input_number == result_number:
             print("you won")
+            total_money += bet
+            print("your total money is", total_money)
         else:
             print("you lost, unlucky")
+            total_money -= bet
+            print("your total money is:", total_money)
     elif choice == "colour":
         print(result_colour)
     else:
