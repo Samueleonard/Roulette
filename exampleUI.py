@@ -1,6 +1,13 @@
 import tkinter as tkinter
+actualnum = 1
+def guessnum(num):
+    if num == actualnum:
+        print("You win!")
+
+
+
 root = tkinter.Tk()
-button1 = tkinter.Button(root, text="1")
+button1 = tkinter.Button(root, text="1", command=lambda: guessnum(int(1)))
 button2 = tkinter.Button(root, text="2")
 button3 = tkinter.Button(root, text="3")
 button4 = tkinter.Button(root, text="4")
