@@ -24,6 +24,11 @@ def place_bet():
 def get_result(choice):
     if choice == "number":
         print(result_number)
+        input_number = input("choose a number")
+        if input_number == result_number:
+            print("you won")
+        else:
+            print("you lost, unlucky")
     elif choice == "colour":
         print(result_colour)
     else:
