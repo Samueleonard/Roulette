@@ -29,6 +29,6 @@ button8.pack()
 button9.pack()
 button10.pack()
 
-#root.mainloop()
+root.mainloop()
 
 
