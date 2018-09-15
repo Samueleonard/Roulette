@@ -3,7 +3,9 @@ colours = ["green", "red", "blue"]
 dozen = ["1st","2nd","3rd"]
 choice = ["number", "dozen", "colour", "other"]
 
-total_money = 10000
+global total_money = 10000
+global bet = 0
+
 
 result_colour = random.choice(colours)
 result_number = random.randint(0, 36)
@@ -20,6 +22,7 @@ def place_bet():
     choice = input("what choice do you want to make (choose from: number, dozen, colour or other)")
     choice = choice.lower()
     get_result(choice)
+    
 
 def get_result(choice):
     if choice == "number":
@@ -27,12 +30,12 @@ def get_result(choice):
         input_number = int(input("choose a number"))
         if input_number == result_number:
             print("you won")
-            total_money += bet
-            print("your total money is", total_money)
+            new_total_money = total_money + bet
+            print("your total money is", new_total_money)
         else:
             print("you lost, unlucky")
-            total_money -= bet
-            print("your total money is:", total_money)
+            new_total_money = total_money - bet
+            print("your total money is:", new_total_money)
     elif choice == "colour":
         print(result_colour)
     else:
