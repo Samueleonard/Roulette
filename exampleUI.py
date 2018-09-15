@@ -1,4 +1,8 @@
 import tkinter as tkinter
+import functions
+
+f
+
 actualnum = 1
 def guessnum(num):
     if num == actualnum:
