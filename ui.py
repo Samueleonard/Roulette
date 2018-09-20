@@ -4,7 +4,7 @@ import roulette
 totalMoney = roulette.total_money
 
 def set_up_prefs():
-    root.title("Roulette - 0.17")
+    root.title("Roulette - 0.18a")
     root.geometry("900x700")
     root.iconbitmap(r'C:\Users\Samuel\Documents\GitHub\Roulette\icon.jpg')
 
