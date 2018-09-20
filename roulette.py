@@ -7,8 +7,6 @@ total_money = 10000
 bet = 0
 
 
-
-
 def __init__(total_money):
     while 0 == 0:
         global result_number
@@ -46,5 +44,3 @@ def get_result(choice, totalMoney, bet):
     else:
         print("test")
     __init__()
-
-#__init__(total_money)

@@ -3,8 +3,10 @@ import roulette
 
 totalMoney = roulette.total_money
 
-def guessnum():
-    roulette.__init__(totalMoney)
+def set_up_prefs():
+    root.title("Roulette - 0.17")
+    root.geometry("900x700")
+    root.iconbitmap(r'C:\Users\Samuel\Documents\GitHub\Roulette\icon.jpg')
 
 def create_canvas():
     canvas = Canvas(root,width=400,height=400,highlightthickness=0,bd=0,bg="#09681a")
@@ -47,9 +49,11 @@ def create_roulette_board():
         r = r + 3
         Button(root,text=str(r), bg="red",fg="white", padx=10, pady=10, command=lambda: guessnum()).grid(row=3,column=int((r+2)/3)+1)
 
+def guessnum():
+    roulette.__init__(totalMoney)
+    
 root = Tk()
-root.title("Roulette - 0.17")
-
+set_up_prefs()
 create_roulette_board()
 create_canvas()
 mainloop()
