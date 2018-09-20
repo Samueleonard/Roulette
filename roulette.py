@@ -47,4 +47,4 @@ def get_result(choice, totalMoney, bet):
         print("test")
     __init__()
 
-__init__(total_money)
+#__init__(total_money)
