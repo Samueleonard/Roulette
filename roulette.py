@@ -6,6 +6,18 @@ choice = ["number", "dozen", "colour", "other"]
 total_money = 10000
 bet = 0
 
+def choice_num():
+    print(result_number)
+    input_number = int(input("choose a number"))
+    if input_number == result_number:
+        print("you won")
+        total_money = totalMoney + bet
+        print("your total money is", total_money)
+        return total_money
+    else:
+        print("you lost, unlucky")
+        total_money = totalMoney - bet
+        print("your total money is:", total_money)
 
 def __init__(total_money):
     while 0 == 0:
@@ -28,19 +40,9 @@ def place_bet(new_money):
 
 def get_result(choice, totalMoney, bet):
     if choice == "number":
-        print(result_number)
-        input_number = int(input("choose a number"))
-        if input_number == result_number:
-            print("you won")
-            total_money = totalMoney + bet
-            print("your total money is", total_money)
-            return total_money
-        else:
-            print("you lost, unlucky")
-            total_money = totalMoney - bet
-            print("your total money is:", total_money)
+       choice_num()
     elif choice == "colour":
         print(result_colour)
     else:
         print("test")
-    __init__()
+    __init__(total_money)
