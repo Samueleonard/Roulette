@@ -60,7 +60,8 @@ def set_up_board_buttons():
     ######sets up non board related buttons (spin wheel, reset bets etc)
     tk.Button(root,text=str(r), bg="red",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: guessnum(rw,col)).grid(row=rw,column=int(col))
     global spin_wheel_button
-    spin_wheel_button = tk.Button(root,text="Spin wheel",bg="blue",fg="white",padx=10,pady=10, command=lambda: game.spin_wheel()).grid(columnspan=2,row=3,column=15)
+    spin_wheel_button = tk.Button(root,text="Spin wheel",bg="blue",fg="white",padx=10,pady=10, command=lambda: game.spin_wheel())
+    spin_wheel_button.grid(columnspan=2,row=3,column=15)
     tk.Button(root,text="Reset bets",bg="blue",fg="white",padx=12,pady=10, command=lambda: test()).grid(columnspan=2,row=2,column=15)
     tk.Button(root, text="1st 12",pady=15,padx=55,bg="#bacc39",fg="white",command=lambda: test()).grid(row=4,column=2,columnspan=4)
     tk.Button(root, text="2nd 12",pady=15,padx=60,bg="#bacc39",fg="white",command=lambda: test()).grid(row=4,column=6,columnspan=4)
@@ -86,6 +87,9 @@ def set_up_board_texts():
     player_display = tk.StringVar()
     player_display.set("Single Player Mode")
     tk.Label(root,textvariable= player_display,bg="green",fg="white",font=("Helvetica",25)).grid(row=1,column=19)
+    global chip_display
+    chip_display = tk.StringVar()
+    tk.Label(root,textvariable= chip_display,bg="green",fg="white",font=("Helvetica",25)).grid(row=2,column=19)
     print('success! the text on the board has been set up')
 
 def set_up_board_circle():

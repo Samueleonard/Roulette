@@ -4,6 +4,7 @@
 import random #for the winning num
 import board
 import tkinter as tk
+import player_data
 
 global amount_players
 win_num = ''
@@ -45,7 +46,7 @@ def def_plng_ply_amnt(amt): # define playing player amount(amount of players)
         board.P1_B.config(state = tk.DISABLED)
         board.pass_button.config(state = tk.DISABLED)
         board.player_display.set("Single Player Mode")
-        #chip_display.set("Total Chips: " + str(player_data[player_turn]['total_chips']))
+        chip_display.set("Total Chips: " + str(player_data.total_chips))
     elif amt == 2:
         amount_players = 2
         board.P1_B.config(state = tk.NORMAL)
@@ -58,4 +59,4 @@ def def_plng_ply_amnt(amt): # define playing player amount(amount of players)
 
 def spin_wheel():
     gen_rand_int()
-    #board.spin_wheel_button.config(state=tk.DISABLED)DOESNT WORK, SHOULD DISABLE BUTTON AFTER CLICKED
+    board.spin_wheel_button.config(state=tk.DISABLED)

@@ -6,9 +6,6 @@
 ##################################
 #imports
 #import modules
-import tkinter as tk
-import random
-import time
 #import scripts
 import board
 import player
@@ -18,7 +15,7 @@ import game
 #creates window
 root = board.root
 #gives the window a title
-root.title('Roulette v1.1 pre-beta')
+root.title('Roulette v0.5 pre-beta')
 #sets dimensions of window(TODO: make board wigets scale with window size AND make window work on different screen sizes)
 root.geometry('700x500')
 #adds buttons, colours, texts etc to the window
