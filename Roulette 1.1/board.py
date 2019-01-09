@@ -1,5 +1,4 @@
 #this script handles all dealings with the board. it will set up the layout of the board(draw all buttons).
-#TODO: add more to this script as it is updated
 
 import tkinter as tk
 root = tk.Tk()
@@ -40,7 +39,7 @@ def set_up_board_buttons():
 
     r = -2
     rw = 3
-    for fghfdhd in range(2):
+    for fghfdhd in range(4):
         r = r + 3
         col = ((r+2)/3)+1
         tk.Button(root,text=str(r), bg="red",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(7)).grid(row=rw,column=int(col))
@@ -50,15 +49,6 @@ def set_up_board_buttons():
         r = r + 3
         col = ((r+2)/3)+1
         tk.Button(root,text=str(r), bg="red",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(9)).grid(row=rw,column=int(col))
-        r = r + 3
-        col = ((r+2)/3)+1
-        tk.Button(root,text=str(r), bg="black",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(10)).grid(row=rw,column=int(col))
-        r = r + 3
-        col = ((r+2)/3)+1
-        tk.Button(root,text=str(r), bg="black",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(11)).grid(row=rw,column=int(col))
-        r = r + 3
-        col = ((r+2)/3)+1
-        tk.Button(root,text=str(r), bg="red",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(12)).grid(row=rw,column=int(col))
 
     ######sets up non board related buttons (spin wheel, reset bets etc)
 
