@@ -5,50 +5,30 @@ root = tk.Tk()
 import game
 import bet_handler
 
+#sets up numbers and colours
 def set_up_board_buttons():
     print('setting up the buttons on the board')
 
-    #sets up numbers and colours
-
     tk.Button(text="0",bg="green",fg="white",padx=10, pady=54, command=lambda: bet_handler.ButtonPressed(0)).grid(rowspan=3, row=1, column=1)#0 button                                                                                                                       
-    r = 0
-    root.configure(bg="#09681a")
-    rw = 1
-    for c in range(4):
-        r = r + 3
-        col = (r/3)+1
-        tk.Button(root,text=str(r), bg="red",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(1)).grid(row=rw,column=int(col))
-        r = r + 3
-        col = (r/3)+1
-        tk.Button(root,text=str(r), bg="black",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(2)).grid(row=rw,column=int(col))
-        r = r + 3
-        col = (r/3)+1
-        tk.Button(root,text=str(r), bg="red",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(3)).grid(row=rw,column=int(col))
-    r = -1
-    rw = 2
-    for fghfdhd in range(4):
-        r = r + 3
-        col = ((r+1)/3)+1
-        tk.Button(root,text=str(r), bg="black",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(4)).grid(row=rw,column=int(col))
-        r = r + 3
-        col = ((r+1)/3)+1
-        tk.Button(root,text=str(r), bg="red",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(5)).grid(row=rw,column=int(col))
-        r = r + 3
-        col = ((r+1)/3)+1
-        tk.Button(root,text=str(r), bg="black",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(6)).grid(row=rw,column=int(col))
 
-    r = -2
-    rw = 3
-    for fghfdhd in range(4):
-        r = r + 3
-        col = ((r+2)/3)+1
-        tk.Button(root,text=str(r), bg="red",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(7)).grid(row=rw,column=int(col))
-        r = r + 3
-        col = ((r+2)/3)+1
-        tk.Button(root,text=str(r),bg="black",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(8)).grid(row=rw,column=int(col))
-        r = r + 3
-        col = ((r+2)/3)+1
-        tk.Button(root,text=str(r), bg="red",fg="white", padx=10, pady=10, command=lambda rw=rw, col=col: bet_handler.ButtonPressed(9)).grid(row=rw,column=int(col))
+    rw = 1
+    col = 0
+#row 1
+    for z in range(9):
+        tk.Button(root,text=col+1).grid(row=rw,column=col)
+        col+=1
+    rw += 1
+    col = 0
+#row 2
+    for z in range(9):
+        tk.Button(root,text=col+1).grid(row=rw,column=col)
+        col+=1
+    rw += 1
+    col = 0
+#row 3
+    for z in range(9):
+        tk.Button(root,text=col+1,bg="red",fg="white",padx=10,pady=10,command=lambda rw=rw, col=col:bet_handler.ButtonPressed(rw,col)).grid(row=rw,column=col)
+        col+=1
 
     ######sets up non board related buttons (spin wheel, reset bets etc)
 

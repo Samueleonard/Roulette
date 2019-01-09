@@ -4,7 +4,7 @@
 import random #for the winning num
 import board
 import tkinter as tk
-import player_data
+import player_data as pd
 
 global amount_players
 win_num = ''
@@ -21,8 +21,11 @@ def set_up_game(amnt):
 def gen_rand_int():
     global win_num #the number that will win the game
     win_num = str(random.randint(0,36))
+    win_num = "1"
     print('the winning number is: ',win_num )
     board.set_circle_text(board.canvas)
+    if win_num in pd.player1.bets:
+        print("you won")
 
 def turn_change(): # when the pass turn button is clicked
     #disables pass turn button

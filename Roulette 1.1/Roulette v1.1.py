@@ -18,6 +18,7 @@ root = board.root
 root.title('Roulette v0.5 pre-beta')
 #sets dimensions of window(TODO: make board wigets scale with window size AND make window work on different screen sizes)
 root.geometry('1300x700')
+root.configure(bg="#09681a")
 #adds buttons, colours, texts etc to the window
 board.set_up_board_buttons()
 board.set_up_board_texts()
