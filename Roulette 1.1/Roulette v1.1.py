@@ -15,7 +15,7 @@ import game
 #creates window
 root = board.root
 #gives the window a title
-root.title('Roulette v0.5 pre-beta')
+root.title('Roulette v1.37r')
 #sets dimensions of window(TODO: make board wigets scale with window size AND make window work on different screen sizes)
 root.geometry('1300x700')
 root.configure(bg="#09681a")
