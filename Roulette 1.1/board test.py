@@ -42,7 +42,4 @@ Button(root,text="B4").grid(row=rw, column=col)
 col += 1
 Button(root,text="B5").grid(row=rw, column=col)
 
-widget = root.grid_slaves(row=int(rw),column=int(col))[0]
-a = widget["text"]
-print(a)
 root.mainloop()
